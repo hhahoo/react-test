@@ -12,6 +12,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: |
+          echo Build script:
+          findstr "build" package.json
           set CI=false
           npm run build
         shell: cmd
